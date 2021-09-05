@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <style>
+        .div1 {
+            margin: 100px;
+            width: 500px;
+            height: 550px;
+            background-color: blanchedalmond;
+            border: 1px solid black;
+        }
+        
+        #option1 {
+            width: 130px;
+        }
+        
+        #select {
+            margin: 20px;
+            margin-left: 130px;
+        }
+        
+        h1 {
+            font-size: 30px;
+            margin: 12px;
+        }
+        
+        #result {
+            margin-left: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <h1>Select any number to print a table:</h1>
+        <div id="select">
+            <select id="option1" onchange="table()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+            </select>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        function table() {
+            var n = document.getElementById("option1").value;
+            var ans = "";
+            var table = "";
+            for (var i = 1; i <= 10; i++) {
+                ans = n * i;
+                table += n + "   * " + i + " = " + ans + "<br/>";
+            }
+            document.getElementById("result").innerHTML = "<h2>  Multiplication table of " + n + " is...<br/><br/>" + table + "</h2>";
+        }
+    </script>
+</body>
+
+</html>
